@@ -4,7 +4,7 @@
 ## Return true when both list have been traversed completely (at the same time)
 ## Way to attack:
 ##     (Deprecated) Most likely will compare both lists to eachother, anytime no match (unless ?), False
-##     New attempt: DP: iterate until "*", s compare with p until match, then iterate again. If ?, just move on no comparison.
+##     New attempt: iterate until "*", s compare with p until match, then iterate again. If ?, just move on no comparison.
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
