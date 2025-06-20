@@ -1,0 +1,13 @@
+# Simple Solution: create a dict (hashmap) and traverse the list.
+# If the complement of the value does not exist in the dict, add it.
+# Time is O(1) because Hash function and putting in key, value pairs take 0(1) time.
+# At worst, the function would take O(n) time but will average out to be O(1) regardless.
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictionary = dict()
+        for i in range(len(nums)):
+            if (target - nums[i]) in dictionary.keys():
+                return [dictionary[target - nums[i]], i]
+            else:
+                dictionary[nums[i]] = i
